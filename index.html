@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="http://code.lslbk.cn/src/ityped/ityped.min.js"></script>
+    
+        <style>
+        .ityped-cursor {
+            opacity: 1;
+            -webkit-animation: blink 0.8s infinite;
+            -moz-animation: blink 0.8s infinite;
+            animation: blink 0.8s infinite;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @-moz-keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        div{
+            display:inline-block;
+            width:300px;
+        }
+    </style>
+</head>
+
+<body>
+        <div id="element"></div>
+    <div class="ityped"></div>
+</body>
+<script type="text/javascript" src="https://cdn.bootcss.com/typed.js/2.0.5/typed.js"></script>
+<script type="text/javascript">
+    var options = {
+    // 
+      strings: ["<i>我是第一段</i>哦哦哦哦！", "我是第二段",'我是第三段'],
+      typeSpeed: 40
+    }
+    var typed = new Typed("#element", options);
+</script>
+</html>
+<script>
+    window.ityped.init(document.querySelector('.ityped'), {
+        strings: ['致力于免费项目源码和详细教程欢迎 \n各位高手加入本博客,分享自己的精彩','做一个清爽简洁的博客网'
+        ],
+        backDelay:2000,
+        //可以写无限条句子，只要用逗号隔开
+        typeSpeed: 155, //打字的速度
+        backSpeed: 0, //删除字的速度
+        startDelay: 500, //每一句开始打字停顿的时间
+     
+        loop:false, //是否循环动画
+        showCursor: true, //是否显示光标
+        cursorChar: "︳", //设置光标字符
+        autoInsertCss:"false"
+    }); 
+</script>

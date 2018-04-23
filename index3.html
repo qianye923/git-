@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        #text,
+        #element {
+            width: 100%;
+            display: block;
+        }
+
+        span {
+            color: red;
+        }
+
+        .typed-cursor {
+            opacity: 1;
+            animation: typedjsBlink 0.7s infinite;
+            -webkit-animation: typedjsBlink 0.7s infinite;
+            animation: typedjsBlink 0.7s infinite;
+        }
+
+        @keyframes typedjsBlink {
+            50% {
+                opacity: 0.0;
+            }
+        }
+
+        @-webkit-keyframes typedjsBlink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .typed-fade-out {
+            opacity: 0;
+            transition: opacity .25s;
+            -webkit-animation: 0;
+            animation: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="element"></div>
+    <!-- <input type="text"  id="text" name=""> -->
+    <script type="text/javascript" src="https://cdn.bootcss.com/typed.js/2.0.5/typed.js"></script>
+    <script type="text/javascript">
+        // var options = {
+        //   strings: ["<h2>下面的还<sapn>没出来</span></h2>哦！", "我都第二段了",'我不延时我不延时我不延时我不延时我不延时'],
+        //   typeSpeed: 80,
+        //   
+        // }
+        var option = {
+            strings: ["<h2>下面的还<sapn>没出来</span>哦！</h2>", "我是第二段", '我延时，我延时，\n 我延时，我延时，我延时，我延时，我延时，我延时，我延时，'],
+            typeSpeed: 80,
+            startDelay: 1000,
+            autoInsertCss: true,
+            contentType: "html"
+        }
+        // console.log(new start());
+        // var typed = new Typed("#text", options);
+        var typed = new Typed("#element", option);
+    </script>
+</body>
+
+</html>
